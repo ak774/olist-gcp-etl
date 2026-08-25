@@ -1,0 +1,40 @@
+source: products
+filename: olist_products_dataset.csv
+
+columns:
+
+  - name: product_id
+    type: STRING
+    nullable: false
+
+  - name: product_category_name
+    type: STRING
+    nullable: true
+
+  - name: product_name_lenght
+    type: INTEGER
+    nullable: true
+
+  - name: product_description_lenght
+    type: INTEGER
+    nullable: true
+
+  - name: product_photos_qty
+    type: INTEGER
+    nullable: true
+
+  - name: product_weight_g
+    type: INTEGER
+    nullable: true
+
+  - name: product_length_cm
+    type: INTEGER
+    nullable: true
+
+  - name: product_height_cm
+    type: INTEGER
+    nullable: true
+
+  - name: product_width_cm
+    type: INTEGER
+    nullable: true

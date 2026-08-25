@@ -1,0 +1,72 @@
+project:
+  id: olist-batch-etl
+  environment: dev
+
+storage:
+  bucket: olist-data-lake-dev
+  bronze_prefix: bronze/olist
+  quarantine_prefix: quarantine/olist
+  archive_prefix: archive/olist
+
+bigquery:
+  silver_dataset: olist_silver
+  gold_dataset: olist_gold
+  metadata_dataset: olist_metadata
+
+metadata:
+  dataset: olist_metadata
+  table: ingestion_manifest
+
+source:
+  name: olist
+  type: kaggle
+  dataset: olistbr/brazilian-ecommerce
+
+files:
+  
+  orders:
+    filename: olist_orders_dataset.csv
+    gcs_folder: orders
+    schema_file: orders.yaml
+
+  customers:
+    filename: olist_customers_dataset.csv
+    gcs_folder: customers
+    schema_file: customers.yaml
+
+  geolocation:
+    filename: olist_geolocation_dataset.csv
+    gcs_folder: geolocation
+    schema_file: geolocation.yaml
+
+  order_items:
+    filename: olist_order_items_dataset.csv
+    gcs_folder: order_items
+    schema_file: order_items.yaml
+
+  payments:
+    filename: olist_order_payments_dataset.csv
+    gcs_folder: payments
+    schema_file: payments.yaml
+
+  products:
+    filename: olist_products_dataset.csv
+    gcs_folder: products
+    schema_file: products.yaml
+
+  sellers:
+    filename: olist_sellers_dataset.csv
+    gcs_folder: sellers
+    schema_file: sellers.yaml
+
+  product_category_name_translation:
+    filename: product_category_name_translation.csv
+    gcs_folder: product_category_translation
+    schema_file: product_category_translation.yaml
+
+  reviews:
+    filename: olist_order_reviews_dataset.csv
+    gcs_folder: reviews
+    schema_file: reviews.yaml
+
+  

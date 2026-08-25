@@ -1,0 +1,20 @@
+source: sellers
+filename: olist_sellers_dataset.csv
+
+columns:
+
+  - name: seller_id
+    type: STRING
+    nullable: false
+
+  - name: seller_zip_code_prefix
+    type: INTEGER
+    nullable: true
+
+  - name: seller_city
+    type: STRING
+    nullable: true
+
+  - name: seller_state
+    type: STRING
+    nullable: true

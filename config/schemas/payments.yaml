@@ -1,0 +1,24 @@
+source: payments
+filename: olist_order_payments_dataset.csv
+
+columns:
+
+  - name: order_id
+    type: STRING
+    nullable: false
+
+  - name: payment_sequential
+    type: INTEGER
+    nullable: false
+
+  - name: payment_type
+    type: STRING
+    nullable: true
+
+  - name: payment_installments
+    type: INTEGER
+    nullable: true
+
+  - name: payment_value
+    type: NUMERIC
+    nullable: true

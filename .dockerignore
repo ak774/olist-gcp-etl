@@ -1,0 +1,30 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local raw data
+data/raw/*
+!data/raw/.gitkeep
+
+*.zip
+*.csv
+
+# Secrets
+.kaggle/
+kaggle.json
+service-account*.json
+*.pem
+*.key
+
+.env
+.env.*

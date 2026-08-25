@@ -1,0 +1,12 @@
+source: product_category_translation
+filename: product_category_name_translation.csv
+
+columns:
+
+  - name: product_category_name
+    type: STRING
+    nullable: false
+
+  - name: product_category_name_english
+    type: STRING
+    nullable: false

@@ -1,0 +1,24 @@
+source: customers
+filename: olist_customers_dataset.csv
+
+columns:
+
+  - name: customer_id
+    type: STRING
+    nullable: false
+
+  - name: customer_unique_id
+    type: STRING
+    nullable: false
+
+  - name: customer_zip_code_prefix
+    type: INTEGER
+    nullable: true
+
+  - name: customer_city
+    type: STRING
+    nullable: true
+
+  - name: customer_state
+    type: STRING
+    nullable: true

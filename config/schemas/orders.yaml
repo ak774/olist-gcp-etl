@@ -1,0 +1,35 @@
+source: orders
+filename: olist_orders_dataset.csv
+
+columns:
+  - name: order_id
+    type: STRING
+    nullable: false
+
+  - name: customer_id
+    type: STRING
+    nullable: false
+
+  - name: order_status
+    type: STRING
+    nullable: true
+
+  - name: order_purchase_timestamp
+    type: TIMESTAMP
+    nullable: true
+
+  - name: order_approved_at
+    type: TIMESTAMP
+    nullable: true
+
+  - name: order_delivered_carrier_date
+    type: TIMESTAMP
+    nullable: true
+
+  - name: order_delivered_customer_date
+    type: TIMESTAMP
+    nullable: true
+
+  - name: order_estimated_delivery_date
+    type: TIMESTAMP
+    nullable: true
