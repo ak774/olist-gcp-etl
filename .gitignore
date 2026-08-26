@@ -1,102 +1,93 @@
-
-Akshay Goel <goelakshay222@gmail.com>
-13:26 (0 minutes ago)
-to me
-
-# ==========================================
-# Google Cloud Platform (GCP) & Credentials
-# ==========================================
-# NEVER commit private keys, service accounts, or tokens to GitHub
-*.json
-*.pem
-*.p12
-.gcp/
-.gcloud/
-adc.json
-credentials.json
-service-account*.json
-secrets/
-
-# ==========================================
-# Python Cache & Virtual Environments
-# ==========================================
-# Byte-compiled / optimized / DLL files
+# ============================================
+# Python
+# ============================================
 __pycache__/
 *.py[cod]
-*$py.class
-
-*.pyc
-data/raw/
-
-# C extensions
+*.pyo
+*.pyd
 *.so
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# Virtual Environments
 .venv/
 venv/
-ENV/
 env/
+ENV/
+
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# ============================================
+# Environment / secrets
+# ============================================
 .env
-pip-log.txt
-pip-delete-this-directory.txt
+.env.*
+!.env.example
 
-# ==========================================
-# Terraform (For your future terraform/ folder)
-# ==========================================
-# Local .terraform directories
-**/.terraform/*
+# Service account credentials
+service-account*.json
+credentials.json
+kaggle.json
 
-# .tfstate files (They contain sensitive resource data and IP addresses)
+# Kaggle
+.kaggle/
+
+# ============================================
+# Terraform
+# ============================================
+**/.terraform/
 *.tfstate
 *.tfstate.*
+*.tfplan
+*.tfplan.*
 
-# Crash log files
+# Terraform variable files
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+!*.tfvars.json.example
+
+# Terraform CLI config
+.terraformrc
+terraform.rc
+
+# Terraform crash logs
 crash.log
 crash.*.log
 
-# Exclude all .tfvars files, which are likely to contain sensitive data
-*.tfvars
-*.tfvars.json
+# ============================================
+# Data / pipeline output
+# ============================================
+data/raw/
+data/processed/
+data/quarantine/
+*.parquet
 
-#Excluding Kaggle Credentials
-.kaggle/
-kaggle.json
-.env
-*.json
+# Large downloaded datasets
+*.csv.zip
+*.zip
 
-# Ignore override files
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
-
-# Include override files you do want to share if applicable
-# !override.tf
-
-# ==========================================
-# IDEs and Operating System
-# ==========================================
+# ============================================
+# IDE
+# ============================================
 .vscode/
 .idea/
+*.iml
+
+# ============================================
+# OS
+# ============================================
 .DS_Store
 Thumbs.db
+
+# ============================================
+# Logs
+# ============================================
+*.log
+logs/
+
+# ============================================
+# Cloud Composer local files
+# ============================================
+airflow.db
+airflow.cfg
